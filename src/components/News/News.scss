@@ -1,0 +1,119 @@
+@import '../../variables.scss';
+
+.news {
+  margin-bottom: 147px;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 22px;
+  }
+
+  &__cardHover {
+    cursor: pointer;
+    &:hover {
+      .news__text {
+        color: $primaryRed;
+      }
+      .news__date {
+        color: $primaryTextColor;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 104px 0 36px 0;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: $primaryTextColor;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: right;
+    color: $primaryRed;
+
+    &:hover {
+      color: $hoverRed;
+    }
+  }
+
+  &__card {
+    height: 310px;
+    border-radius: 16px;
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: $primaryTextColor;
+    margin-bottom: 10px;
+    transition: $transition;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $ColorGray;
+  }
+}
+
+@media (max-width: 1023px) {
+  .news {
+    margin-bottom: 83px;
+
+    &__container {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+  }
+
+  .card {
+    margin-left: 8px;
+    margin-right: 8px;
+
+    flex-shrink: 100 !important;
+    width: 279px;
+
+    &:first-child {
+      margin-left: 16px;
+    }
+  }
+
+  .news__card {
+    height: 279px;
+  }
+
+  .news__title {
+    margin-top: 65px;
+  }
+
+  .news__subtitle {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .news__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 374px) {
+  .news__title {
+    display: block;
+  }
+}

@@ -1,0 +1,214 @@
+@import '../../variables.scss';
+
+.services {
+  &__container {
+    width: $size100percent;
+    padding: 95px 0 95px;
+  }
+
+  &__subtitle {
+    @include subtitle;
+    color: $primaryTextColor;
+
+    &:hover {
+      color: $ColorWhite;
+    }
+  }
+
+  &__card {
+    overflow: hidden;
+    min-height: 233px;
+    max-width: 496px;
+    border-radius: $border;
+    background: $ColorWhite;
+    position: relative;
+    transition: $transition;
+    cursor: pointer;
+    z-index: 23;
+
+    &:hover {
+      .services__img-1,
+      .services__img-2 {
+        scale: 1.1;
+      }
+    }
+  }
+
+  &__img-1 {
+    @include images;
+    background-image: url(../../assets/img/cost_back.svg);
+  }
+
+  &__img-2 {
+    @include images;
+    background-image: url(../../assets/img/tariffs_back.svg);
+  }
+
+  &__icon {
+    @include icon;
+  }
+
+  &__title {
+    @include title;
+    color: $primaryTextColor;
+  }
+
+  &-clients {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: 110%;
+    background-position: top;
+    padding: 0 30px;
+    max-width: 496px;
+    background-image: url(../../assets/img/Clients.jpg);
+    position: relative;
+    border-radius: $border;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      background-size: 120%;
+    }
+
+    &__subtitle {
+      @include subtitle;
+    }
+
+    &__icon {
+      height: 48px;
+      width: 48px;
+      position: absolute;
+      right: 32px;
+      top: 32px;
+    }
+
+    &__title {
+      @include title;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      color: $ColorWhite;
+      margin-bottom: 34px;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+    grid-template-rows: repeat(2, 233px);
+    gap: 32px;
+
+    &__1 {
+      grid-row: 1;
+    }
+
+    &__2 {
+      grid-row: 2;
+    }
+
+    &__3 {
+      grid-row: 1 / 3;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .services {
+    &__container {
+      width: $size100percent;
+      padding: 95px 0 95px;
+    }
+
+    &__title {
+      left: 24px;
+      top: 81px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__icon {
+      @include icon2;
+    }
+
+    &-clients {
+      background-size: 140%;
+
+      &:hover {
+        background-size: 150%;
+      }
+
+      &__icon {
+        @include icon2;
+      }
+    }
+
+    &__container {
+      width: 100%;
+      padding: 64px 0 64px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .services {
+    &__card {
+      max-width: none;
+      height: 288px;
+    }
+
+    &__icon {
+      @include icon2;
+    }
+
+    &__container {
+      width: $size100percent;
+      padding: 95px 0 95px;
+    }
+
+    &__subtitle {
+      left: 24px;
+      top: 53px;
+    }
+
+    &__icon {
+      right: $iconSize;
+      top: $iconSize;
+    }
+
+    &__title {
+      left: 24px;
+      top: 81px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &-grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-clients {
+      max-width: none;
+      height: 288px;
+      background-size: 110%;
+
+      &:hover {
+        background-size: 120%;
+      }
+
+      &__icon {
+        @include icon2;
+      }
+    }
+
+    &__container {
+      width: 100%;
+      padding: 64px 0 64px;
+    }
+  }
+}

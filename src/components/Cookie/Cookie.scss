@@ -1,0 +1,114 @@
+@import '../../variables.scss';
+
+.cookie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  max-width: 1024px;
+  padding: 16px 24px;
+  margin: 16px;
+  background: $primaryWhite;
+  box-shadow: 0px 40px 36px rgba(0, 0, 1, 0.1);
+  border-radius: 8px;
+  bottom: 15px;
+  z-index: 8000;
+
+  &__img {
+    margin-right: 24px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #3b82f6;
+    cursor: pointer;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 24px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: $primaryTextColor;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: $primaryTextColor;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__buttonBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 291px;
+  }
+
+  &__manage {
+    width: 173px;
+    height: 36px;
+    color: $primaryTextColor;
+    background: $ColorWhite;
+    margin-right: 16px;
+  }
+
+  &__accept {
+    width: 102px;
+    height: 36px;
+    color: $primaryWhite;
+    background: $primaryRed;
+    transition: $transition;
+
+    &:hover {
+      background: $hoverRed;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cookie {
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 10px;
+
+    &__img {
+      margin-bottom: 5px;
+    }
+
+    &__box {
+      margin-right: 0px;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      margin-bottom: 16px;
+    }
+  }
+}

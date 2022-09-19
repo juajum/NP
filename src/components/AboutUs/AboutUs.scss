@@ -1,0 +1,82 @@
+@import '../../variables.scss';
+
+.aboutUs {
+  &__title {
+    @include titleOnDesktop;
+    color: $primaryTextColor;
+    margin-top: 112px;
+    margin-bottom: 19px;
+  }
+
+  &__text {
+    @include textOnDesctop;
+    color: $primaryTextColor;
+    margin-bottom: 41px;
+  }
+
+  &__button {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    background: $primaryRed;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: $transition;
+    width: 135px;
+    height: 48px;
+    margin-bottom: 16px;
+
+    &:hover {
+      background: $hoverRed;
+    }
+  }
+
+  &__box-forCards {
+    display: grid;
+    grid-column-gap: 3%;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, 8%) 45% repeat(2, 8%);
+  }
+
+  &__card {
+    width: $size100percent;
+    height: $size100percent;
+    border-radius: 16px;
+
+    &-1 {
+      grid-column: 1;
+      grid-row: 3 / 7;
+    }
+
+    &-2 {
+      grid-column: 2;
+      grid-row: 2 / 6;
+    }
+
+    &-3 {
+      grid-column: 3;
+      grid-row: 1 /5;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .aboutUs {
+    &__title {
+      @include titleOnMobile;
+    }
+
+    &__text {
+      @include textOnMobile;
+      margin-bottom: 35px;
+    }
+
+    &__button {
+      width: $size100percent;
+      margin-bottom: 48px;
+    }
+  }
+}
+

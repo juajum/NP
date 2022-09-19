@@ -1,0 +1,177 @@
+$primaryWhite: #fff;
+$primaryRed: #ef4444;
+$hoverRed: #dc2626;
+$primaryTextColor: #1e293b;
+$ColorGray: #64748b;
+$ColorWhite: #f1f5f9;
+$ColorCardBack: #f8fafc;
+$transition: background 00.5s;
+$primaryWidth: 1024px;
+$lineHeight22: 22px;
+$size100percent: 100%;
+$fontSize16: 16px;
+$size16: 16px;
+$iconSize: 16px;
+$border: 16px;
+
+* {
+  color: $primaryWhite;
+  box-sizing: border-box;
+  font-family: 'NovaPoshta';
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  margin: 0;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  width: $size100percent;
+  padding: 0 $size16;
+}
+
+@mixin burgerMenuIcon {
+  position: relative;
+  width: 18px;
+  height: 12px;
+}
+
+@mixin burgerMenuItem {
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  left: 0;
+  background: $primaryTextColor;
+  border-radius: 1px;
+  opacity: 1;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+@mixin backgroundImage {
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin positiomAbsolute {
+  position: absolute;
+  left: 32px;
+}
+
+@mixin subtitle {
+  @include positiomAbsolute;
+  top: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin icon {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+}
+
+@mixin icon2 {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+@mixin title {
+  @include positiomAbsolute;
+  top: 67px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+@mixin textOnMobile {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin titleOnMobile {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin textOnDesctop {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin titleOnDesktop {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+@mixin button {
+  border: none;
+  cursor: pointer;
+  transition: $transition;
+  border-radius: 4px;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin NavbarButton {
+  @include flexCenter;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: $primaryWhite;
+  height: 40px;
+  background: $primaryRed;
+  border-radius: 4px;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background: $hoverRed;
+  }
+}
+
+@mixin NavbarMenuList {
+  display: flex;
+  list-style-type: none;
+  background: $primaryWhite;
+  z-index: 11;
+}
+
+@mixin images {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  width: 172px;
+  height: 162px;
+  right: 0;
+  border-radius: 0 0 $border 0;
+  transition: all 0.5s;
+  z-index: 22;
+}

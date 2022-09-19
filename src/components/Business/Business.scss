@@ -1,0 +1,57 @@
+@import '../../variables.scss';
+
+.business {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/img/business.jpg);
+
+  &__container {
+    padding-top: 118px;
+  }
+
+  &__title {
+    @include titleOnDesktop;
+    margin-bottom: 21px;
+  }
+
+  &__subtitle {
+    @include textOnDesctop;
+    max-width: 476px;
+    margin-bottom: 41px;
+  }
+
+  &__button {
+    @include button;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $primaryTextColor;
+    width: 187px;
+    height: 48px;
+    background: $ColorWhite;
+    margin-bottom: 128px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .business {
+    &__container {
+      padding-top: 93px;
+    }
+
+    &__title {
+      @include titleOnMobile;
+      margin-bottom: 19px;
+    }
+
+    &__subtitle {
+      @include textOnMobile;
+      margin-bottom: 35px;
+    }
+
+    &__button {
+      width: $size100percent;
+      margin-bottom: 96px;
+    }
+  }
+}

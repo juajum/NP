@@ -1,0 +1,99 @@
+@import '../../variables.scss';
+
+.promo {
+  background-color: #b6b8dc;
+
+  &__box {
+    max-width: 560px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include titleOnDesktop;
+    padding-top: 104px;
+    color: $primaryTextColor;
+  }
+
+  &__subtitle {
+    padding-top: 21px;
+    max-width: 471px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $primaryTextColor;
+  }
+
+  &__phone {
+    margin-top: 63px;
+    height: 432px;
+    width: 260px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 41px;
+    padding-bottom: 118px;
+    width: 340px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .promo {
+    &__title {
+      padding-top: 130px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__phone {
+      margin-top: 56px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    &__box {
+      @include flex;
+    }
+
+    &__container {
+      @include flex;
+    }
+
+    &__title {
+      text-align: center;
+      padding-top: 65px;
+    }
+
+    &__subtitle {
+      text-align: center;
+      padding-top: 19px;
+    }
+    &__links {
+      padding-top: 43px;
+      padding-bottom: 0;
+    }
+
+    &__phone {
+      margin-top: 72px;
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .promo__links {
+    @include flex;
+    width: 100%;
+  }
+}

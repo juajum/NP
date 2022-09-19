@@ -1,0 +1,72 @@
+@import '../../variables.scss';
+
+.numbers {
+  background: $ColorCardBack;
+  padding-top: 96px;
+  padding-bottom: 136px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: $primaryTextColor;
+    margin-bottom: 19px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: $primaryTextColor;
+    margin-bottom: 57px;
+  }
+
+  &__text-container {
+    padding: 0 160px;
+  }
+
+  &__container {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__card {
+    padding: 25px 32px 0 32px;
+    background: $primaryWhite;
+    border-radius: 16px;
+
+    &-title {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 68px;
+      color: $primaryRed;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: $primaryTextColor;
+      margin-bottom: 31px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .numbers {
+    &__text-container {
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .numbers__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
