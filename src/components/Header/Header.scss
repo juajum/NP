@@ -54,19 +54,23 @@
   }
 
   &__field {
+    font-weight: 400;
+font-size: 15px;
+line-height: 22px;
     width: 386px;
     background: $primaryWhite;
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 17px 73px 17px 52px;
     color:#64748B;
+    height: 56px;
 
 
 
     &::placeholder {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: $lineHeight22;
+    font-weight: 400;
+font-size: 15px;
+line-height: 22px;
       display: flex;
       align-items: center;
       color: $ColorGray;

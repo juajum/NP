@@ -31,7 +31,7 @@ export const News = () => {
         </div>
 
         <div className='news__container'>
-          {screenWidthSwiper > 1024 ? (
+          {screenWidthSwiper > 1023 ? (
             <>
               {newsCards.map((card) => (
                 <div className={card.class} key={card.img}>

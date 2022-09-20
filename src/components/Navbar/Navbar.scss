@@ -92,6 +92,7 @@
 }
 
 .open {
+   cursor: pointer;
   @include burgerMenuIcon;
 
   &__item {
