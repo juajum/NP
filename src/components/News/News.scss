@@ -12,6 +12,7 @@
 
   &__cardHover {
     cursor: pointer;
+    
     &:hover {
       .news__text {
         color: $primaryRed;
