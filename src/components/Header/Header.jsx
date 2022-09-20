@@ -8,9 +8,11 @@ export const Header = () => {
       <div className='container'>
         <div className='header__box'>
           <div className='header__content'>
+
             <h1 className='header__title'>
               The fast, affordable way to send parcels and cargoes
             </h1>
+
             <p className='header__subtitle'>
               Send a shipment from one of thousands of Parcel Lockers or have a
               courier pick it up
@@ -33,8 +35,10 @@ export const Header = () => {
                 Track parcel
               </button>
             </form>
+            
           </div>
         </div>
+
         <div className='header__cookie'>
           <Cookie />
         </div>
